@@ -1,12 +1,7 @@
 *.class
 *.swp
 bin/
-ressource/
 another/
 default/
 
 .idea/
-
-New World-day-updates.json
-
-New World-day.png

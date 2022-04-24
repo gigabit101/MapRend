@@ -42,5 +42,4 @@ public class Block {
 	public int getBiome() {
 		return biome;
 	}
-	
 }

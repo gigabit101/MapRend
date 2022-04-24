@@ -130,7 +130,12 @@ public class Program {
 			if(visible) {
 				File textureImgFile = new File(rawFolder, name + ".png");
 				if(!textureImgFile.exists()) {
-					exitWithError("Cannot find texture: " + name);
+					System.out.println("Cannot find texture " + name + " Using missing_texture.png");
+					textureImgFile = new File("missing_texture.png");
+					if(!textureImgFile.exists())
+					{
+						exitWithError("no missing_texture.png found in " + textureImgFile.getPath().toString() + " Please add a texture to use for missing textures");
+					}
 				}
 				try {
 					BufferedImage img = ImageIO.read(textureImgFile);
